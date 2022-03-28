@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CL5_陣列平均.html</title>
+</head>
+<style>
+    #box5{
+        width: 300px;height: 600px;
+        background-color: rgb(137, 161, 172);
+        border: 5px solid rgb(56, 70, 80);
+        border-radius: 30px;
+    }
+    table {
+        border-collapse: collapse;
+        border: 2px solid #ffffff;
+        width: 220px;
+        background-color: #e7f8ff;
+    }
+    th,td {
+        border: 1px solid #ffffff;
+        color: #404060;
+        padding: 5px;
+        font: 16px "微軟雅黑";
+    }
+    th {
+        background-color: rgb(60, 101, 129);
+        font: bold 16px "微軟雅黑";
+        color: #fff;
+    }
+    td {
+        font: 14px "微軟雅黑";
+        text-align: center;
+    }
+    #inp5{
+        width: 80px;height: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    #but5{
+        width: 70px;height: 40px;
+        font: bold 20px "微軟雅黑";
+    }
+</style>
+<script>
+    window.onload = function(){
+        let but5 = document.getElementById("but5")
+        but5.onclick = function(){            
+            let score5 = document.getElementsByName("score5")
+            let scoreAry5 = new Array()
+            for (let i = 0; i < score5.length; i++){
+                scoreAry5.push(parseInt(score5[i].value))
+            }
+            let sum5 = 0
+            for (let k = 0; k < scoreAry5.length; k++){
+                sum5 = sum5 + scoreAry5[k]
+            }
+            let avgV5 = sum5 / scoreAry5.length
+            let Sans5 = document.getElementById("Sans5")
+            Sans5.innerHTML = avgV5
+        }
+    }
+</script>
+<body>
+    <center>
+        <div id="box5">
+            <h1>全班分數平均</h1>
+            <table id="tab5">
+                <tr>
+                    <th>座號</th><th>分數</th>
+                </tr>
+                <tr><td>1</td><td><input type="text" id="inp5" name="score5" value="60"></td></tr>
+                <tr><td>2</td><td><input type="text" id="inp5" name="score5" value="65"></td></tr>
+                <tr><td>3</td><td><input type="text" id="inp5" name="score5" value="70"></td></tr>
+                <tr><td>4</td><td><input type="text" id="inp5" name="score5" value="75"></td></tr>
+                <tr><td>5</td><td><input type="text" id="inp5" name="score5" value="80"></td></tr>
+                <tr><td>6</td><td><input type="text" id="inp5" name="score5" value="60"></td></tr>
+                <tr><td>7</td><td><input type="text" id="inp5" name="score5" value="65"></td></tr>
+                <tr><td>8</td><td><input type="text" id="inp5" name="score5" value="70"></td></tr>
+                <tr><td>9</td><td><input type="text" id="inp5" name="score5" value="75"></td></tr>
+                <tr><td>10</td><td><input type="text" id="inp5" name="score5" value="80"></td></tr>
+                <tr>
+                    <th>平均</th><th><span id="Sans5">0</span></th>
+                </tr>
+            </table><br>
+            <button id="but5">計算</button>
+        </div>
+    </center>
+</body>
+</html>

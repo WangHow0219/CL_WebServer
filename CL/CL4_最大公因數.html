@@ -6,33 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CL4_最大公因數.html</title>
 </head>
+<style>
+    .box4{
+        width: 250px;height: 310px;
+        background-color: rgb(140, 170, 142);
+        border: 5px solid rgb(64, 82, 65);
+        border-radius: 20px;
+    }
+    .inpbox4{
+        width: 80px;height: 20px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    #ans4{
+        width: 80px;height: 20px;
+        border: 3px solid rgb(37, 32, 32);
+    }
+    #but4{
+        width: 60px;height: 35px;
+        font: bold 15px "微軟雅黑";
+    }
+    #Sans4{
+        width: 80px;height: 23px;
+        border: 3px solid rgb(37, 32, 32);
+        font-size: 20px;
+    }
+</style>
 <script>
     window.onload = function(){
-        let but = document.getElementById("but")
-        but.onclick = function(){
-            let a = document.getElementById("a")
-            let b = document.getElementById("b")
-            let Vans = 0            
-            a = parseInt(a.value)
-            b = parseInt(b.value)
+        let but4 = document.getElementById("but4")
+        but4.onclick = function(){
+            let a4 = document.getElementById("a4")
+            let b4 = document.getElementById("b4")
+            let Vans4 = 0            
+            a4 = parseInt(a4.value)
+            b4 = parseInt(b4.value)
             do{
-                r = a % b
-                a = b
-                b = r
-            } while(r != 0)
-            Vans = a
-            let Sans = document.getElementById("Sans")
-            Sans.innerHTML = Vans
+                r4 = a4 % b4
+                a4 = b4
+                b4 = r4
+            } while(r4 != 0)
+            Vans4 = a4
+            let Sans4 = document.getElementById("Sans4")
+            Sans4.innerHTML = Vans4
         }
     }
 </script>
 <body>
     <center>
-        <h2>最大公因數</h2>
-        A = <input type="text" id="a"><br>
-        B = <input type="text" id="b"><br><br>
-        <button id="but">計算</button><br>
-        最大公因數 = <span id="Sans"></span>
+        <div class="box4">
+            <h1>最大公因數</h1>
+            A = <input type="text" class="inpbox4" id="a4"><br>
+            B = <input type="text" class="inpbox4" id="b4"><br>
+            ------------------------------------<br>
+            最大公因數<br>
+            <div id="Sans4"></div><br>
+            <button id="but4">計算</button>
+        </div>
     </center>
 </body>
 </html>

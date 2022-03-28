@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw_簡單加法</title>
+    <script>
+        window.onload = function(){
+            let Count = document.getElementById("count")
+            Count.onclick = function(){
+                let A = document.getElementById("a")
+                let B = document.getElementById("b")
+                let OKValue = parseInt(A.innerText) + parseInt(B.innerText)
+                let ANS = document.getElementById("ans")
+                ANS.innerText = OKValue
+            }
+        }
+    </script>
+</head>
+<body>
+    <span id="a">24</span> + <span id="b">16</span> <span id="count">=</span> <span id="ans"></span>
+</body>
+</html>

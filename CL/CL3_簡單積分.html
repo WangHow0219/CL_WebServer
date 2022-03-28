@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CL3_簡單積分.html</title>
+</head>
+<script>
+    window.onload = function(){
+        let but = document.getElementById("but")
+        but.onclick = function(){
+            let a = document.getElementById("a")
+            let b = document.getElementById("b")
+            let Vans = 0
+            let dx = 0.001
+            let x = 0
+            for(x=parseInt(a.value); x<parseInt(b.value); x=x+dx){
+                Vans = Vans + (x*x+1)*dx
+            }
+            let Sans = document.getElementById("Sans")
+            Sans.innerHTML = Vans
+        }
+    }
+</script>
+<body>
+    <center>
+        <h2>簡單積分</h2>
+        A = <input type="text" id="a"><br>
+        B = <input type="text" id="b"><br>
+        <button id="but">計算</button><br>
+        Ans = <span id="Sans"></span>
+    </center>
+</body>
+</html>

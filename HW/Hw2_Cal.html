@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加減乘除計算機</title>
+    <style>
+        .box2{
+            width: 350px;height: 200px;
+            background-color: rgb(172, 170, 137);
+            border: 5px solid rgb(80, 78, 56);
+            border-radius: 20px;
+        }
+        .inpbox2{
+            width: 80px;height: 20px;
+            margin: 7px;
+            border-radius: 5px;
+        }
+        .but2{
+            width: 60px;height: 30px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            let CAL2 = document.getElementById("cal2")
+            CAL2.onclick = function(){
+                let A2 = document.getElementById("a2")
+                let B2 = document.getElementById("b2")
+                let OP2 = document.getElementById("op2")
+                let ANS2 = document.getElementById("ans2")
+                let OP2_Value = OP2.value
+                let ANS2_Value
+                // if (OP_Value == "+") {
+                //     ANS_Value = parseInt(a.value) + parseInt(b.value)
+                // } else if (OP_Value == "-") {
+                //     ANS_Value = parseInt(a.value) - parseInt(b.value)
+                // } else if (OP_Value == "*") {
+                //     ANS_Value = parseInt(a.value) * parseInt(b.value)
+                // } else if (OP_Value == "/") {
+                //     ANS_Value = parseInt(a.value) / parseInt(b.value)
+                // }
+                switch (OP2_Value) {
+                    case "+":
+                        ANS2_Value = parseInt(a2.value) + parseInt(b2.value)
+                        break;
+                    case "-":
+                        ANS2_Value = parseInt(a2.value) - parseInt(b2.value)
+                        break;
+                    case "*":
+                        ANS2_Value = parseInt(a2.value) * parseInt(b2.value)
+                        break;
+                    case "/":
+                        ANS2_Value = parseInt(a2.value) / parseInt(b2.value)
+                        break;
+                    default:
+                        break;
+                }
+                ANS2.innerHTML = ANS2_Value
+            }
+        }
+    </script>
+</head>
+
+<body>
+<center>        
+    <div class="box2">
+        <h1>加減乘除計算機</h1>
+        <input type="text" id="a2" class="inpbox2">
+        <select id="op2">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="b2" class="inpbox2">
+        = 
+        <span id="ans2"></span>
+        <br>
+        <button id="cal2" class="but2">計算</button>
+    </div>
+</center>
+</body>
+</html>

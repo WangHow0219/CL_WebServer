@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CL_inner</title>
+    <script>
+        window.onload = function(){
+            // 基本
+            let show = document.getElementById("MyName")
+            show.onclick = function(){
+                console.log("Wang How")
+            }
+            // 取得
+            let A = document.getElementById("ClickMe_1")
+            A.onclick = function(){
+                console.log(this.innerText)
+                console.log(this.innerHTML)
+            }
+            // 設定
+            let B = document.getElementById("ClickMe_2")
+            B.onclick = function(){
+                this.innerHTML = "ABC"
+            }
+        }
+
+    </script>
+    <style>
+        #MyName{
+            border: 2px black solid;
+            width: 80px;height: 25px;
+            margin-bottom: 10px;
+        }
+        #ClickMe_1{
+            border: 2px black solid;
+            width: 50px;height: 25px;
+            margin-bottom: 10px;
+        }
+        #ClickMe_2{
+            border: 2px black solid;
+            width: 70px;height: 25px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 基本 -->
+    <div id="MyName">ShowName</div>
+    <!-- 取得 -->
+    <div id="ClickMe_1"><b>點我</b></div>
+    <!-- 設定 -->
+    <div id="ClickMe_2">按我改字</div>
+</body>
+</html>

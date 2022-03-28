@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw5_合併2,3,4</title>
+</head>
+<style>
+    .box2{
+        width: 330px;height: 180px;
+        background-color: rgb(172, 170, 137);
+        border: 5px solid rgb(80, 78, 56);
+        border-radius: 20px;
+    }
+    .inpbox2{
+        width: 80px;height: 20px;
+        margin: 7px;
+        border-radius: 5px;
+    }
+    .but2{
+        width: 60px;height: 30px;
+        margin-top: 10px;
+    }
+    .score3{
+        width: 80px;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    #avg3{
+        width: 80px;height: 17px;
+        border: 3px solid rgb(68, 68, 68);
+    }
+    .box3{
+        width: 300px;height: 300px;
+        background-color: rgb(132, 167, 189);
+        border: 5px solid rgb(56, 61, 80);
+        border-radius: 20px;
+        margin: 15px;
+    }
+    #but3{
+        width: 60px;height: 30px;
+        margin-top: -5px;
+    }
+    .box4{
+        width: 300px;height: 300px;
+        background-color: rgb(170, 140, 140);
+        border: 5px solid rgb(82, 64, 64);
+        border-radius: 20px;
+    }
+    .inpbox4{
+        width: 80px;height: 20px;
+        margin: 7px;
+        border-radius: 5px;
+    }
+    #ans4{
+        width: 80px;height: 20px;
+        border: 3px solid rgb(37, 32, 32);
+    }
+    #but4{
+        width: 60px;height: 30px;
+    }
+</style>
+<script>
+    window.onload = function(){
+        //Hw2
+        let CAL2 = document.getElementById("cal2")
+        CAL2.onclick = function(){
+            let A2 = document.getElementById("a2")
+            let B2 = document.getElementById("b2")
+            let OP2 = document.getElementById("op2")
+            let ANS2 = document.getElementById("ans2")
+            let OP2_Value = OP2.value
+            let ANS2_Value
+            // if (OP_Value == "+") {
+            //     ANS_Value = parseInt(a.value) + parseInt(b.value)
+            // } else if (OP_Value == "-") {
+            //     ANS_Value = parseInt(a.value) - parseInt(b.value)
+            // } else if (OP_Value == "*") {
+            //     ANS_Value = parseInt(a.value) * parseInt(b.value)
+            // } else if (OP_Value == "/") {
+            //     ANS_Value = parseInt(a.value) / parseInt(b.value)
+            // }
+            switch (OP2_Value) {
+                case "+":
+                    ANS2_Value = parseInt(a2.value) + parseInt(b2.value)
+                    break;
+                case "-":
+                    ANS2_Value = parseInt(a2.value) - parseInt(b2.value)
+                    break;
+                case "*":
+                    ANS2_Value = parseInt(a2.value) * parseInt(b2.value)
+                    break;
+                case "/":
+                    ANS2_Value = parseInt(a2.value) / parseInt(b2.value)
+                    break;
+                default:
+                    break;
+            }
+            ANS2.innerHTML = ANS2_Value
+        }
+        //Hw3
+        let cal3 = document.getElementById("but3")
+        cal3.onclick = function(){
+            let A3 = document.getElementById("a3")
+            let B3 = document.getElementById("b3")
+            let C3 = document.getElementById("c3")
+            let avg3
+            avg3 = (parseInt(A3.value) + parseInt(B3.value) + parseInt(C3.value))/3
+            avg3 = avg3.toFixed(2)
+            let ShowAns3 = document.getElementById("avg3")
+            ShowAns3.innerHTML = avg3
+            if (avg3 >= 60) {
+                ShowAns3.style.borderColor = "lawngreen"
+                ShowAns3.style.color = "green"
+            } else {
+                ShowAns3.style.borderColor = "red"
+                ShowAns3.style.color = "darkred"
+            }
+        }
+        //Hw4ez
+        let but4 = document.getElementById("but4")
+        but4.onclick = function(){
+            let a4 = document.getElementById("a4")
+            let b4 = document.getElementById("b4")
+            let ans4 = 0
+            for (n=parseInt(a4.value); n<=parseInt(b4.value); n++) {
+                ans4 = ans4 + n
+            }
+            let ShowAns4 = document.getElementById("ans4")
+            ShowAns4.innerHTML = ans4
+        }
+    }
+
+</script>
+<body>
+<center>
+    <!-- Hw2 -->
+    <div class="box2">
+        <h1>加減乘除計算機</h1>
+        <input type="text" id="a2" class="inpbox2">
+        <select id="op2">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="b2" class="inpbox2">
+        = 
+        <span id="ans2"></span>
+        <br>
+        <button id="cal2" class="but2">計算</button>
+    </div>
+
+    <!-- Hw3 -->
+    <div class="box3">
+        <h1>成績判斷</h1>
+        國文 : <input type="text" class="score3" id="a3"><br>
+        英文 : <input type="text" class="score3" id="b3"><br>
+        數學 : <input type="text" class="score3" id="c3"><br>
+        -------------------------------------
+        <br>
+        平均 : <div id="avg3"></div><br>
+        <button id="but3">計算</button>
+    </div>
+
+    <!-- Hw4 -->
+    <div class="box4">
+        <h1>累加器</h1>
+        First : <input type="text" class="inpbox4" id="a4"><br>
+        Final : <input type="text" class="inpbox4" id="b4"><br>
+        -------------------------------------
+        <br>
+        結果 : <div id="ans4"></div><br>
+        <button id="but4">計算</button>
+    </div>
+</center>
+</body>
+</html>

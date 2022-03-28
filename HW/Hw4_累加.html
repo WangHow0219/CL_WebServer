@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>累加</title>
+<style>
+    .box4{
+        width: 250px;height: 320px;
+        background-color: rgb(170, 140, 140);
+        border: 5px solid rgb(82, 64, 64);
+        border-radius: 20px;
+        }
+    .inpbox4{
+        width: 80px;height: 20px;
+        margin: 7px;
+        border-radius: 5px;
+    }
+    #ans4{
+        width: 80px;height: 20px;
+        border: 3px solid rgb(37, 32, 32);
+    }
+    #but4{
+        width: 60px;height: 30px;
+    }
+</style>
+<script>
+    window.onload = function(){
+        let but4 = document.getElementById("but4")
+        but4.onclick = function(){
+            let a4 = document.getElementById("a4")
+            let b4 = document.getElementById("b4")
+            let ans4 = 0
+            for (n=parseInt(a4.value); n<=parseInt(b4.value); n++) {
+                ans4 = ans4 + n
+            }
+            let ShowAns4 = document.getElementById("ans4")
+            ShowAns4.innerHTML = ans4
+        }
+    }
+</script>
+</head>
+<body>
+<center>
+    <div class="box4">
+        <h1>累加器</h1>
+        first : <input type="text" class="inpbox4" id="a4"><br>
+        final : <input type="text" class="inpbox4" id="b4"><br>
+        -------------------------------------
+        <br>
+        結果 : <div id="ans4"></div><br>
+        <button id="but4">計算</button>
+    </div>
+</center>
+</body>
+</html>

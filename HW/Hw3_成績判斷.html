@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成績判斷</title>
+</head>
+<style>
+    .score3{
+        width: 80px;
+    }
+    #avg3{
+        width: 80px;height: 17px;
+        border: 3px solid rgb(68, 68, 68);
+    }
+    .box3{
+            width: 300px;height: 300px;
+            background-color: rgb(132, 167, 189);
+            border: 5px solid rgb(56, 61, 80);
+            border-radius: 20px;
+        }
+</style>
+<script>
+    window.onload = function(){
+        let cal3 = document.getElementById("but3")
+        cal3.onclick = function(){
+            let A3 = document.getElementById("a3")
+            let B3 = document.getElementById("b3")
+            let C3 = document.getElementById("c3")
+            let avg3
+            avg3 = (parseInt(A3.value) + parseInt(B3.value) + parseInt(C3.value))/3
+
+            let ShowAns3 = document.getElementById("avg3")
+            ShowAns3.innerHTML = avg3
+            if (avg3 >= 60) {
+                ShowAns3.style.borderColor = "lawngreen"
+                ShowAns3.style.color = "green"
+            } else {
+                ShowAns3.style.borderColor = "red"
+                ShowAns3.style.color = "darkred"
+            }
+        }
+    }
+</script>
+<body>
+<center>
+    <div class="box3">
+        <h1>成績判斷</h1>
+        國文 : <input type="text" class="score3" id="a3"><br>
+        英文 : <input type="text" class="score3" id="b3"><br>
+        數學 : <input type="text" class="score3" id="c3"><br>
+        -------------------------------------
+        <br>
+        平均 : <div id="avg3"></div><br>
+        <button id="but3">計算</button>
+    </div>
+</center>
+</body>
+</html>

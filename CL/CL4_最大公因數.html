@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CL4_最大公因數.html</title>
+</head>
+<script>
+    window.onload = function(){
+        let but = document.getElementById("but")
+        but.onclick = function(){
+            let a = document.getElementById("a")
+            let b = document.getElementById("b")
+            let Vans = 0            
+            a = parseInt(a.value)
+            b = parseInt(b.value)
+            do{
+                r = a % b
+                a = b
+                b = r
+            } while(r != 0)
+            Vans = a
+            let Sans = document.getElementById("Sans")
+            Sans.innerHTML = Vans
+        }
+    }
+</script>
+<body>
+    <center>
+        <h2>最大公因數</h2>
+        A = <input type="text" id="a"><br>
+        B = <input type="text" id="b"><br><br>
+        <button id="but">計算</button><br>
+        最大公因數 = <span id="Sans"></span>
+    </center>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CL6_陣列總分平均.html</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        border: 1px solid #000000;
+        background-color: #e7f8ff;
+    }
+    th,td {
+        border: 1px solid #000000;
+        color: #404060;
+        padding: 5px;
+        font: 16px "微軟雅黑";
+    }
+    th {
+        background-color: rgb(60, 101, 129);
+        font: bold 16px "微軟雅黑";
+        color: #fff;
+    }
+    td {
+        font: 14px "微軟雅黑";
+        text-align: center;
+    }
+    input {
+        text-align: center;
+    }
+    #inp6{
+        width: 45px;
+        border: 0.5px solid black;
+        border-radius: 5px;
+        background-color: #e7f8ff;
+    }
+    .lat6{
+        width: 50px;height: 16px;
+    }
+</style>
+<script>
+    window.onload = function(){
+        let cal6 = document.getElementById("but6")
+        cal6.onclick = function(){
+            let chi6 = document.getElementsByName("chi6")
+            let eng6 = document.getElementsByName("eng6")
+            let math6 = document.getElementsByName("math6")
+            let com6 = document.getElementsByName("com6")
+
+            let chiAry6 = new Array()
+            for (let i = 0; i < chi6.length; i++){
+                chiAry6.push(parseInt(chi6[i].value))}
+            let engAry6 = new Array()
+            for (let i = 0; i < eng6.length; i++){
+                engAry6.push(parseInt(eng6[i].value))}
+            let mathAry6 = new Array()
+            for (let i = 0; i < math6.length; i++){
+                mathAry6.push(parseInt(math6[i].value))}
+            let comAry6 = new Array()
+            for (let i = 0; i < com6.length; i++){
+                comAry6.push(parseInt(com6[i].value))}
+            
+            let chiSum6 = 0
+            for (let k = 0; k < chiAry6.length; k++){
+                chiSum6 = chiSum6 + chiAry6[k]}
+            let engSum6 = 0
+            for (let k = 0; k < engAry6.length; k++){
+                engSum6 = engSum6 + engAry6[k]}
+            let mathSum6 = 0
+            for (let k = 0; k < mathAry6.length; k++){
+                mathSum6 = mathSum6 + mathAry6[k]}
+            let comSum6 = 0
+            for (let k = 0; k < comAry6.length; k++){
+                comSum6 = comSum6 + comAry6[k]}
+            
+            let chiAvg6 = 0
+            chiAvg6 = chiSum6 / chiAry6.length;
+            let engAvg6 = 0
+            engAvg6 = engSum6 / engAry6.length;
+            let mathAvg6 = 0
+            mathAvg6 = mathSum6 / mathAry6.length;
+            let comAvg6 = 0
+            comAvg6 = comSum6 / comAry6.length;
+
+            let SchiAvg = document.getElementById("avg_chi6")
+            SchiAvg.innerHTML = chiAvg6
+            let SengAvg = document.getElementById("avg_eng6")
+            SengAvg.innerHTML = engAvg6
+            let SmathAvg = document.getElementById("avg_math6")
+            SmathAvg.innerHTML = mathAvg6
+            let ScomAvg = document.getElementById("avg_com6")
+            ScomAvg.innerHTML = comAvg6
+
+            let sumP6 = document.getElementsByName("sum6")  
+            let sumPAry6 = new Array()
+            let avgP6 = document.getElementsByName("avg6")
+            let avgPAry6 = new Array()
+
+            for (i = 0; i < 5; i++){
+                sumPAry6[i] = chiAry6[i] + engAry6[i] + mathAry6[i] + comAry6[i]}
+            for (i = 0; i < 5; i++){
+                avgPAry6[i] = sumPAry6[i] / 4}
+            
+            for (i = 0; i < sumP6.length; i++){
+                sumP6[i].innerHTML = sumPAry6[i]}
+            for (i = 0; i < avgP6.length; i++){
+                avgP6[i].innerHTML = sumPAry6[i] / 4}
+            
+            let sumSum6 = 0
+            let SavgSum6 = document.getElementById("avg_sum6")
+            for (i = 0; i < sumP6.length; i++){
+                sumSum6 = sumSum6 + sumPAry6[i]}
+            SavgSum6.innerHTML = sumSum6 / sumP6.length
+        }
+    }
+</script>
+<body>
+<center>
+    <table>
+        <tr>
+            <th>編號</th>
+            <th>國文</th>
+            <th>英文</th>
+            <th>數學</th>
+            <th>計概</th>
+            <th>總分</th>
+            <th>平均</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="text" id="inp6" name="chi6" value="60"></td>
+            <td><input type="text" id="inp6" name="eng6" value="70"></td>
+            <td><input type="text" id="inp6" name="math6" value="80"></td>
+            <td><input type="text" id="inp6" name="com6" value="90"></td>
+            <td><div class="lat6" name="sum6"></div></td>
+            <td><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="text" id="inp6" name="chi6" value="68"></td>
+            <td><input type="text" id="inp6" name="eng6" value="78"></td>
+            <td><input type="text" id="inp6" name="math6" value="98"></td>
+            <td><input type="text" id="inp6" name="com6" value="59"></td>
+            <td><div class="lat6" name="sum6"></div></td>
+            <td><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="text" id="inp6" name="chi6" value="48"></td>
+            <td><input type="text" id="inp6" name="eng6" value="67"></td>
+            <td><input type="text" id="inp6" name="math6" value="78"></td>
+            <td><input type="text" id="inp6" name="com6" value="86"></td>
+            <td><div class="lat6" name="sum6"></div></td>
+            <td><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="text" id="inp6" name="chi6" value="84"></td>
+            <td><input type="text" id="inp6" name="eng6" value="71"></td>
+            <td><input type="text" id="inp6" name="math6" value="62"></td>
+            <td><input type="text" id="inp6" name="com6" value="47"></td>
+            <td><div class="lat6" name="sum6"></div></td>
+            <td><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="text" id="inp6" name="chi6" value="57"></td>
+            <td><input type="text" id="inp6" name="eng6" value="83"></td>
+            <td><input type="text" id="inp6" name="math6" value="64"></td>
+            <td><input type="text" id="inp6" name="com6" value="78"></td>
+            <td><div class="lat6" name="sum6"></div></td>
+            <td><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <th>平均</th>
+            <th><div class="lat6" id="avg_chi6"></div></th>
+            <th><div class="lat6" id="avg_eng6"></div></th>
+            <th><div class="lat6" id="avg_math6"></div></th>
+            <th><div class="lat6" id="avg_com6"></div></th>
+            <th><div class="lat6" id="avg_sum6"></div></th>
+        </tr>
+    </table><br>
+    <button id="but6">計算</button>
+</center>
+</body>
+</html>

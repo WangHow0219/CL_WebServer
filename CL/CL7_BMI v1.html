@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CL7_BMI v1.html</title>
+</head>
+<script>
+    window.onload = function(){
+        let bmi = 0
+        let w = document.getElementById("w")
+        let h = document.getElementById("h")
+        let cal = document.getElementById("but")
+        bmi = getBMI(w,h)
+    }
+
+    function getBMI(w, h){        
+        let bmi = w/(h*h)
+        return bmi
+        console.log(bmi)
+    }
+</script>
+<body>
+<center>
+    <h1>計算BMI v1</h1>
+    <div>
+        體重 : <input type="text" id="w"><br>
+        身高 : <input type="text" id="h"><br>
+        --------------------------------------<br>
+        答案<br>
+        <div id="Sans"></div><br>
+        <button id="but">計算</button>
+    </div>
+</center>
+</body>
+</html>

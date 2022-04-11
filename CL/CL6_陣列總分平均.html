@@ -9,22 +9,24 @@
 <style>
     table {
         border-collapse: collapse;
-        border: 1px solid #000000;
-        background-color: #e7f8ff;
+        border: none;
+        border-radius: 10px;
+        background-color: #ffe7e7;
     }
     th,td {
-        border: 1px solid #000000;
-        color: #404060;
-        padding: 5px;
-        font: 16px "微軟雅黑";
+        border: none;
+        color: #604040;
+        padding: 6px;
+        font: 20px "微軟雅黑";
     }
     th {
-        background-color: rgb(60, 101, 129);
-        font: bold 16px "微軟雅黑";
-        color: #fff;
+        background-color: rgb(129, 60, 60);
+        border-radius: 0px;
+        font: bold 20px "微軟雅黑";
+        color: rgb(255, 255, 255);
     }
     td {
-        font: 14px "微軟雅黑";
+        font: 18px "微軟雅黑";
         text-align: center;
     }
     input {
@@ -32,13 +34,26 @@
     }
     #inp6{
         width: 45px;
-        border: 0.5px solid black;
+        border: none;
         border-radius: 5px;
-        background-color: #e7f8ff;
+        background-color: #fff4f4;
+        font: 18px "微軟雅黑";
+    }
+    #but6{
+        width: 80px;height: 40px;
+        font: bold 20px "微軟雅黑";
+        border-radius: 12px;
     }
     .lat6{
         width: 50px;height: 16px;
     }
+    .box_6{
+        width: 480px;height: 420px;
+        border: 7px solid rgb(121, 59, 45);
+        border-radius: 25px;
+        background-color: rgb(176, 129, 110);
+    }
+
 </style>
 <script>
     window.onload = function(){
@@ -118,6 +133,8 @@
 </script>
 <body>
 <center>
+<div class="box_6">
+    <h1>全班總分平均表單</h1>
     <table>
         <tr>
             <th>編號</th>
@@ -183,6 +200,7 @@
         </tr>
     </table><br>
     <button id="but6">計算</button>
+</div>
 </center>
 </body>
 </html>

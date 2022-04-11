@@ -6,31 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CL7_BMI v1.html</title>
 </head>
+<style>
+    .box_7{
+        width: 260px;height: 300px;
+        border: 7px solid rgb(89, 45, 130);
+        border-radius: 25px;
+        background-color: rgb(171, 133, 200);
+    }
+    .inp7{
+        width: 60px;height: 25px;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 9px;
+        margin: 5px;
+    }
+    #Sans7{
+        width: 70px;height: 25px;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 3px;
+        background-color: rgb(197, 171, 217);
+        border: 1px solid black;
+        border-radius: 9px;
+    }
+    #but7{
+        width: 80px;height: 40px;
+        font: bold 20px "微軟雅黑";
+        border-radius: 12px;
+    }
+</style>
 <script>
     window.onload = function(){
-        let bmi = 0
-        let w = document.getElementById("w")
-        let h = document.getElementById("h")
-        let cal = document.getElementById("but")
-        bmi = getBMI(w,h)
+        let cal7 = document.getElementById("but7")
+        cal7.onclick = function(){
+            let bmi7 = 0
+            let w7 = document.getElementById("w7")
+            let h7 = document.getElementById("h7")
+            bmi7 = getBMI(w7.value, h7.value)
+            let Sans7 = document.getElementById("Sans7")
+            Sans7.innerHTML = bmi7
+        }
     }
-
-    function getBMI(w, h){        
-        let bmi = w/(h*h)
-        return bmi
-        console.log(bmi)
+    function getBMI(w7, h7){        
+        let bmi7 = w7/(h7*h7)
+        bmi7 = Math.round(bmi7)
+        return bmi7
     }
 </script>
 <body>
-<center>
-    <h1>計算BMI v1</h1>
-    <div>
-        體重 : <input type="text" id="w"><br>
-        身高 : <input type="text" id="h"><br>
+<center>    
+    <div class="box_7">
+        <h2>計算BMI v1</h2>
+        體重 : <input type="text" class="inp7" id="w7" value="50"><br>
+        身高 : <input type="text" class="inp7" id="h7" value="1.7"><br>
         --------------------------------------<br>
-        答案<br>
-        <div id="Sans"></div><br>
-        <button id="but">計算</button>
+        你的BMI約為 : <br>
+        <div id="Sans7"></div><br>
+        <button id="but7">計算</button>
     </div>
 </center>
 </body>

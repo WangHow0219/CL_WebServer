@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw9_合併cl6,cl7,hw8</title>
+</head>
+<style>@import url(Hw9.css);</style>
+<script  type="text/javascript" src="Hw9.js"></script>
+<body>
+<center>
+<!-- CL6_陣列總分平均 -->
+<div class="box_6">
+    <h1>全班總分平均表單</h1>
+    <table id="table6">
+        <tr>
+            <th id="th6">編號</th>
+            <th id="th6">國文</th>
+            <th id="th6">英文</th>
+            <th id="th6">數學</th>
+            <th id="th6">計概</th>
+            <th id="th6">總分</th>
+            <th id="th6">平均</th>
+        </tr>
+        <tr>
+            <td id="td6">1</td>
+            <td id="td6"><input type="text" id="inp6" name="chi6" value="60"></td>
+            <td id="td6"><input type="text" id="inp6" name="eng6" value="70"></td>
+            <td id="td6"><input type="text" id="inp6" name="math6" value="80"></td>
+            <td id="td6"><input type="text" id="inp6" name="com6" value="90"></td>
+            <td id="td6"><div class="lat6" name="sum6"></div></td>
+            <td id="td6"><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <td id="td6">2</td>
+            <td id="td6"><input type="text" id="inp6" name="chi6" value="68"></td>
+            <td id="td6"><input type="text" id="inp6" name="eng6" value="78"></td>
+            <td id="td6"><input type="text" id="inp6" name="math6" value="98"></td>
+            <td id="td6"><input type="text" id="inp6" name="com6" value="59"></td>
+            <td id="td6"><div class="lat6" name="sum6"></div></td>
+            <td id="td6"><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <td id="td6">3</td>
+            <td id="td6"><input type="text" id="inp6" name="chi6" value="48"></td>
+            <td id="td6"><input type="text" id="inp6" name="eng6" value="67"></td>
+            <td id="td6"><input type="text" id="inp6" name="math6" value="78"></td>
+            <td id="td6"><input type="text" id="inp6" name="com6" value="86"></td>
+            <td id="td6"><div class="lat6" name="sum6"></div></td>
+            <td id="td6"><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <td id="td6">4</td>
+            <td id="td6"><input type="text" id="inp6" name="chi6" value="84"></td>
+            <td id="td6"><input type="text" id="inp6" name="eng6" value="71"></td>
+            <td id="td6"><input type="text" id="inp6" name="math6" value="62"></td>
+            <td id="td6"><input type="text" id="inp6" name="com6" value="47"></td>
+            <td id="td6"><div class="lat6" name="sum6"></div></td>
+            <td id="td6"><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <td id="td6">5</td>
+            <td id="td6"><input type="text" id="inp6" name="chi6" value="57"></td>
+            <td id="td6"><input type="text" id="inp6" name="eng6" value="83"></td>
+            <td id="td6"><input type="text" id="inp6" name="math6" value="64"></td>
+            <td id="td6"><input type="text" id="inp6" name="com6" value="78"></td>
+            <td id="td6"><div class="lat6" name="sum6"></div></td>
+            <td id="td6"><div class="lat6" name="avg6"></div></td>
+        </tr>
+        <tr>
+            <th id="th6">平均</th>
+            <th id="th6"><div class="lat6" id="avg_chi6"></div></th>
+            <th id="th6"><div class="lat6" id="avg_eng6"></div></th>
+            <th id="th6"><div class="lat6" id="avg_math6"></div></th>
+            <th id="th6"><div class="lat6" id="avg_com6"></div></th>
+            <th id="th6"><div class="lat6" id="avg_sum6"></div></th>
+        </tr>
+    </table><br>
+    <button id="but6">計算</button>
+</div>
+
+<!-- CL7_BMI v1 -->
+<div class="box_7">
+    <h2>計算BMI v1</h2>
+    體重 : <input type="text" class="inp7" id="w7" value="50"><br>
+    身高 : <input type="text" class="inp7" id="h7" value="1.7"><br>
+    --------------------------------------<br>
+    你的BMI約為 : <br>
+    <div id="Sans7"></div><br>
+    <button id="but7">計算</button>
+</div>
+
+<!-- Hw8_飲料訂購單 -->
+<div class="box_8">
+    <h2>飲料訂購單</h2>
+    <table>
+        <tr>
+            <th id="lft">品項</th><th>價格</th><th>數量</th>
+        </tr>
+        <tr>
+          <td>紅茶</td>
+          <th>30</th>
+          <td><input type="number" class="inpnum_8" id="numA_8" min="0" max="30" value="4"></td>
+        </tr>
+        <tr>
+          <td>奶茶</td>
+          <th>40</th>
+          <td><input type="number" class="inpnum_8" id="numB_8" min="0" max="30" value="2"></td>
+        </tr>
+        <tr>
+          <td>珍珠奶茶</td>
+          <th>50</th>
+          <td><input type="number" class="inpnum_8" id="numC_8" min="0" max="30" value="1"></td>
+        </tr>
+    </table>
+
+    <div class="radio_box">
+        <form id="radio_list" action="">
+            <label class="control">
+                <input type="radio" name="option" checked />非會員
+            </label>
+            &nbsp&nbsp&nbsp&nbsp
+            <label class="control">
+                <input type="radio" name="option" />會員            
+            </label>
+        </form>
+    </div>
+    
+    <button id="but8">計算</button>    
+    <h3>========您的訂單========</h3>
+    <table>
+        <tr>
+            <td id="lft">紅茶</td>
+            <td>..........</td>
+            <td><span id="S_a">0</span></td>
+            <td>杯</td>
+        </tr>
+        <tr>
+            <td id="lft">奶茶</td>
+            <td>..........</td>
+            <td><span id="S_b">0</span></td>
+            <td>杯</td>
+        </tr>
+        <tr>
+            <td id="lft">珍珠奶茶</td>
+            <td>..........</td>
+            <td><span id="S_c">0</span></td>
+            <td>杯</td>
+        </tr>
+    </table>
+    ------------------------------<br>
+    小計 : <span id="S_smal_total8">0</span><br>
+    <span id="S_ismb"></span><br>
+    ------------------------------<br>
+    <span class="S_total8">
+        總計 : <span id="S_total8">0</span>
+    </span>    
+</div>
+
+</center>
+</body>
+</html>

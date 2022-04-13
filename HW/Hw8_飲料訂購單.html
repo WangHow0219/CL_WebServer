@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw8_飲料訂購單.html</title>
+</head>
+<style>
+    .box_8{
+        width: 280px;height: 570px;
+        border: 7px solid rgb(55, 139, 154);
+        border-radius: 32px;
+        background-color: rgb(138, 200, 214);
+    }
+    .th8,.td8 { padding: 5px; }
+    .inpnum_8{
+        width: 38px;
+        text-align: center;
+    }
+    #lft { text-align: left; }
+    .radio_box{
+        width: 190px;height: 28px;
+        margin-top: 10px;
+        padding-top: 5px;
+        background-color: rgb(193, 235, 247);
+        border-radius: 20px;
+    }
+    #but8{
+        margin-top: 15px;
+        margin-bottom: 7px;
+        width: 70px;height: 35px;
+        font: bold 16px "微軟雅黑";
+        border-radius: 10px;
+    }
+    #S_ismb{
+        font-size: 13px;
+        color: brown;
+        font-weight: 900;
+    }
+    .S_total8{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+</style>
+<script>
+window.onload = function(){
+    let cal8 = document.getElementById("but8")
+    cal8.onclick = function(){
+        calculate()
+    }
+}
+
+function calculate(){
+    let a8 = document.getElementById("numA_8")
+    let b8 = document.getElementById("numB_8")
+    let c8 = document.getElementById("numC_8")
+    let radio_num = document.getElementById("radio_list").option
+    
+    let S_a = document.getElementById("S_a")
+    let S_b = document.getElementById("S_b")
+    let S_c = document.getElementById("S_c")
+    S_a.innerHTML = a8.value
+    S_b.innerHTML = b8.value
+    S_c.innerHTML = c8.value
+
+    let smal_total8 = 0
+    smal_total8 = 30 * parseInt(a8.value) + 40 * parseInt(b8.value) + 50 * parseInt(c8.value)
+    let S_smal_total8 = document.getElementById("S_smal_total8")
+    S_smal_total8.innerHTML = smal_total8
+
+    let S_ismb = document.getElementById("S_ismb")
+    let total8 = smal_total8
+    let S_total8 = document.getElementById("S_total8")
+
+    // 判斷會員
+    if(radio_num[1].checked){
+        S_ismb.innerHTML = "會員打八折 !"
+        total8 = smal_total8 * 0.8
+        S_total8.innerHTML = total8
+    }
+    else{
+        S_ismb.innerHTML = "( 不是會員，原價計算 )"
+        S_total8.innerHTML = total8
+    }
+}
+</script>
+<body>
+<center>
+<div class="box_8">
+    <h2>飲料訂購單</h2>
+    <table>
+        <tr>
+            <th class="th8" id="lft">品項</th><th class="th8">價格</th><th class="th8">數量</th>
+        </tr>
+        <tr>
+          <td class="td8">紅茶</td>
+          <th class="th8">30</th>
+          <td class="td8"><input type="number" class="inpnum_8" id="numA_8" min="0" max="30" value="4"></td>
+        </tr>
+        <tr>
+          <td class="td8">奶茶</td>
+          <th class="th8">40</th>
+          <td class="td8"><input type="number" class="inpnum_8" id="numB_8" min="0" max="30" value="2"></td>
+        </tr>
+        <tr>
+          <td class="td8">珍珠奶茶</td>
+          <th class="th8">50</th>
+          <td class="td8"><input type="number" class="inpnum_8" id="numC_8" min="0" max="30" value="1"></td>
+        </tr>
+    </table>
+
+    <div class="radio_box">
+        <form id="radio_list" action="">
+            <label class="control">
+                <input type="radio" name="option" checked />非會員
+            </label>
+            &nbsp&nbsp&nbsp&nbsp
+            <label class="control">
+                <input type="radio" name="option" />會員            
+            </label>
+        </form>
+    </div>
+    
+    <button id="but8">計算</button>    
+    <h3>========您的訂單========</h3>
+    <table>
+        <tr>
+            <td id="lft">紅茶</td>
+            <td>..........</td>
+            <td><span id="S_a">0</span></td>
+            <td>杯</td>
+        </tr>
+        <tr>
+            <td id="lft">奶茶</td>
+            <td>..........</td>
+            <td><span id="S_b">0</span></td>
+            <td>杯</td>
+        </tr>
+        <tr>
+            <td id="lft">珍珠奶茶</td>
+            <td>..........</td>
+            <td><span id="S_c">0</span></td>
+            <td>杯</td>
+        </tr>
+    </table>
+    ------------------------------<br>
+    小計 : <span id="S_smal_total8">0</span><br>
+    <span id="S_ismb"></span><br>
+    ------------------------------<br>
+    <span class="S_total8">
+        總計 : <span id="S_total8">0</span>
+    </span>    
+</div>
+</center>
+</body>
+</html>

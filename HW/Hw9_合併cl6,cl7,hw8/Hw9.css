@@ -1,0 +1,115 @@
+/* CL6 */
+#table6 {
+    border-collapse: collapse;
+    border: none;
+    border-radius: 10px;
+    background-color: #ecffe7;
+}
+#th6,#td6 {
+    border: none;
+    color: #416040;
+    padding: 6px;
+    font: 20px "微軟雅黑";
+}
+#th6 {
+    background-color: rgb(52, 106, 53);
+    border-radius: 0px;
+    font: bold 20px "微軟雅黑";
+    color: rgb(255, 255, 255);
+}
+#td6 {
+    font: 18px "微軟雅黑";
+    text-align: center;
+}
+input {
+    text-align: center;
+}
+#inp6{
+    width: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f6fff4;
+    font: 18px "微軟雅黑";
+}
+#but6{
+    width: 80px;height: 40px;
+    font: bold 20px "微軟雅黑";
+    border-radius: 12px;
+}
+.lat6{
+    width: 50px;height: 16px;
+}
+.box_6{
+    width: 480px;height: 420px;
+    border: 7px solid rgb(45, 121, 48);
+    border-radius: 25px;
+    background-color: rgb(111, 176, 110);
+}
+
+/* CL7 */
+.box_7{
+    margin: 15px;
+    width: 260px;height: 300px;
+    border: 7px solid rgb(89, 45, 130);
+    border-radius: 25px;
+    background-color: rgb(171, 133, 200);
+}
+.inp7{
+    width: 60px;height: 25px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 9px;
+    margin: 5px;
+}
+#Sans7{
+    width: 70px;height: 25px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 3px;
+    background-color: rgb(197, 171, 217);
+    border: 1px solid black;
+    border-radius: 9px;
+}
+#but7{
+    width: 80px;height: 40px;
+    font: bold 20px "微軟雅黑";
+    border-radius: 12px;
+}
+
+/* Hw8 */
+.box_8{
+    margin: 15px;
+    width: 280px;height: 550px;
+    border: 7px solid rgb(55, 139, 154);
+    border-radius: 32px;
+    background-color: rgb(138, 200, 214);
+}
+.th8,.td8 { padding: 5px; }
+.inpnum_8{
+    width: 38px;
+    text-align: center;
+}
+#lft { text-align: left; }
+.radio_box{
+    width: 190px;height: 28px;
+    margin-top: 10px;
+    padding-top: 5px;
+    background-color: rgb(193, 235, 247);
+    border-radius: 20px;
+}
+#but8{
+    margin-top: 15px;
+    margin-bottom: 7px;
+    width: 70px;height: 35px;
+    font: bold 16px "微軟雅黑";
+    border-radius: 10px;
+}
+#S_ismb{
+    font-size: 13px;
+    color: brown;
+    font-weight: 900;
+}
+.S_total8{
+    font-weight: bold;
+    font-size: 20px;
+}

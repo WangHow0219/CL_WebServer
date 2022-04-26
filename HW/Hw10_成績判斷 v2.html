@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw3_成績判斷 v2.html</title>
+</head>
+<style>
+    .score3{
+        width: 80px;
+    }
+    #Savg3{
+        width: 80px;height: 17px;
+        border: 3px solid rgb(68, 68, 68);
+    }
+    .box3{
+        width: 300px;height: 300px;
+        background-color: rgb(132, 167, 189);
+        border: 5px solid rgb(56, 61, 80);
+        border-radius: 20px;
+    }
+</style>
+<script>
+    window.onload = function(){
+        cal3()
+        let a3 = document.getElementById("a3")
+        let b3 = document.getElementById("b3")
+        let c3 = document.getElementById("c3")
+        let radio_num = document.getElementById("radio_list")
+
+        a3.onkeyup = function(){
+            cal3()
+        }
+        b3.onkeyup = function(){
+            cal3()
+        }
+        c3.onkeyup = function(){
+            cal3()
+        }
+        radio_num.onchange = function(){
+            cal3()
+        }
+    }
+
+    function cal3(){
+        let a3 = parseInt(document.getElementById("a3").value)
+        let b3 = parseInt(document.getElementById("b3").value)
+        let c3 = parseInt(document.getElementById("c3").value)
+        let radio_num = document.getElementById("radio_list").option
+
+        let avg3 = 0
+        avg3 = (a3 + b3 + c3)/3
+
+        let Savg3 = document.getElementById("Savg3")
+        Savg3.innerHTML = avg3
+        if (avg3 >= 60) {
+            Savg3.style.borderColor = "lawngreen"
+            Savg3.style.color = "darkgreen"
+        } else {
+            Savg3.style.borderColor = "red"
+            Savg3.style.color = "darkred"
+        }
+    }
+</script>
+<body>
+<center>
+    <div class="box3">
+        <h1>成績判斷</h1>
+        國文 : <input type="text" class="score3" id="a3" value="60"><br>
+        英文 : <input type="text" class="score3" id="b3" value="70"><br>
+        數學 : <input type="text" class="score3" id="c3" value="80"><br><br>
+        特殊生
+        <form id="radio_list" action="">
+            <label class="control">
+                <input type="radio" name="option"/>是
+            </label>
+            &nbsp&nbsp
+            <label class="control">
+                <input type="radio" name="option" checked />否
+            </label>
+        </form>
+        -------------------------------------
+        <br>
+        平均 : <div id="Savg3"></div><br>
+    </div>
+</center>
+</body>
+</html>

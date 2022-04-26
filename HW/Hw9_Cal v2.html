@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw2_Cal v2.html</title>
+    <style>
+        .box2{
+            width: 350px;height: 150px;
+            background-color: rgb(172, 170, 137);
+            border: 5px solid rgb(80, 78, 56);
+            border-radius: 20px;
+        }
+        .inpbox2{
+            width: 80px;height: 20px;
+            margin: 7px;
+            border-radius: 5px;
+        }
+        .but2{
+            width: 60px;height: 30px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+    window.onload = function(){
+        let a2 = document.getElementById("a2")
+        let b2 = document.getElementById("b2")
+        let op2 = document.getElementById("op2")
+        a2.onkeyup = function(){
+            cal2()
+        }
+        b2.onkeyup = function(){
+            cal2()
+        }
+        op2.onchange = function(){
+            cal2()
+        }
+    }
+    function cal2(){
+        let a2 = parseInt(document.getElementById("a2").value)
+        let b2 = parseInt(document.getElementById("b2").value)
+        let op2 = document.getElementById("op2").value
+        let ans2 = 0
+        
+        switch (op2) {
+            case "+":
+                ans2 = a2 + b2
+                break;
+            case "-":
+                ans2 = a2 - b2
+                break;
+            case "*":
+                ans2 = a2 * b2
+                break;
+            case "/":
+                ans2 = a2 / b2
+                break;
+            default:
+                break;
+        }
+        
+        let Sans2 = document.getElementById("Sans2")
+        Sans2.innerHTML = ans2
+    }
+    </script>
+</head>
+
+<body>
+<center>        
+    <div class="box2">
+        <h1>加減乘除計算機</h1>
+        <input type="text" id="a2" class="inpbox2">
+        <select id="op2">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="b2" class="inpbox2">
+        = 
+        <span id="Sans2"></span>
+    </div>
+</center>
+</body>
+</html>

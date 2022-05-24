@@ -55,10 +55,10 @@ window.onload = function(){
             
             if (re_avg1 >= 60) {
                 Sans2.style.borderColor = "rgb(52, 255, 29)"
-                Sans2.style.color = "rgb(12, 120, 0)"
+                Sans2.style.color = "rgb(52, 255, 29)"
             } else {
                 Sans2.style.borderColor = "red"
-                Sans2.style.color = "darkred"
+                Sans2.style.color = "rgb(255, 149, 149)"
             }
         })
         .catch(err => {

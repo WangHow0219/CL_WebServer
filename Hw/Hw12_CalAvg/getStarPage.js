@@ -47,7 +47,7 @@ export default function getStarPage(){
         <div id="Sans4" class="Sans">0</div><br>
         <button id="but4" class="but">計算</button>
     </div>
-
+    
     `
     return starPage
 }

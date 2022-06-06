@@ -7,7 +7,7 @@ $db_password = '';
 $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8";
 try {
     $conn = new PDO($dsn, $db_user, $db_password);
-    $sql = "SELECT * FROM `student`";
+    $sql = "SELECT * FROM `student_new`";
     $stmt = $conn->prepare($sql);
     $result = $stmt->execute();
     if ($result) {
